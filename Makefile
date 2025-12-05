@@ -7,7 +7,7 @@ SRCS=\
 	$(SRC_DIR)/print_msg.cpp
 
 SRC_DIR=srcs
-OBJS=$(SRCS:.cpp=.o)
+OBJS=$(SRCS:%.cpp=%.o)
 %.o: %.cpp
 	$(CPP) $(CFLAGS) $(INCS) -c $< -o $@
 
